@@ -6,11 +6,12 @@
 }
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #fff;
+    background: whitesmoke;
     color: #000;
 }
+/*Header*/
 header{
-    background: #fff;
+    background: rgb(237, 237, 237);
     width: 100%;
     padding: 24px 40px;
     display: grid;
@@ -86,6 +87,7 @@ header .logo span{
     margin-left: 50px;
     color: #111;
 }
+/*Main*/
 .main{
     margin-top: 10px;
     padding: 30px 40px 60px;
@@ -132,3 +134,86 @@ header .logo span{
     font-size: 14px;
     color: #111;
 }
+/*Section*/
+.faq{
+    padding: 60px 40px;
+    background: whitesmoke;
+}
+.faq-container{
+    max-width: 980px;
+    margin: 0 auto;
+}
+.faq-title{
+    font-size: 38px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 45px;
+    color: #111;
+}
+.faq-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.faq-item{
+    background: #efefef;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.faq-question{
+    padding: 18px 18px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    cursor: pointer;
+    list-style: none;
+}
+.faq-question:hover{
+    background: rgba(0,0,0,0.03);
+}
+.faq-question::-webkit-details-marker{
+    display: none;
+}
+.faq-icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #111;
+    font-size: 20px;
+    font-weight: bolder;
+    transition: transform 0.35s ease;
+}
+.faq-answer{
+    padding: 0 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #111;
+    background: rgb(247, 245, 245);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-6px);
+    transition:
+        max-height 0.5s ease,
+        opacity 0.35s ease,
+        transform 0.5s ease;
+}
+.faq-item[open] .faq-answer{
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 16px 18px 18px;
+}
+.faq-item[open] .faq-icon{
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+/*Footer*/
