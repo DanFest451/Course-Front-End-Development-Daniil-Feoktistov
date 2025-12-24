@@ -6,12 +6,14 @@
     <title>Game Store Project</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/jfif" href="images/gaming.jfif">
+    <script src="js/script.js"></script>
     <script src="https://kit.fontawesome.com/6f09422f86.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- header section-->
     <header>
         <a href="index.html" target="_blank" class="logo">GameWorld<span>$</span></a>
+        
         <!--navbar-->
         <nav class="navbar">
             <a href="#home">Home</a>
@@ -19,6 +21,7 @@
             <a href="#products">Products</a>
             <a href="#contact">Contact</a>
         </nav>
+
         <!--icons-->
         <div class="icons">
             <a href="#favorites" class="fa-solid fa-heart"></a>
@@ -34,8 +37,10 @@
     <!--main section-->
     <main class="main">
         <section class="catalog" id="products">
+
             <!--Games-->
             <div class="catalog-grid">
+
                 <!--Row 1-->
                 <!--Game 1-->
                 <article class="game-card">
@@ -174,9 +179,66 @@
         </section>
     </main>
 
+    <!--FAQ section-->
+    <section class="faq" id="faq">
+        <div class="faq-container">
+
+            <!--FAQ Title-->
+            <h2 class="faq-title">FAQ</h2>
+
+            <!--List of questions-->
+            <div class="faq-list">
+
+                <!--Question 1-->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        How do I buy a game from GameWorld?
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        Choose a game from the catalog, add it to cart, and complete checkout.
+                    </div>
+                </details>
+
+                <!--Question 2-->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Can I refund a game after purchase?
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        Refund rules depend on platform and purchase type. Contact support for details.
+                    </div>
+                </details>
+
+                <!--Question 3-->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        How fast do I receive the game after payment?
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        Usually instantly. In rare cases it can take a few minutes.
+                    </div>
+                </details>
+
+                <!--Question 4-->
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Do you have discounts or promo codes?
+                        <span class="faq-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        Yes, we run seasonal sales and sometimes provide promo codes.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!--footer section-->
     <footer>
-
+        
     </footer>
 </body>
 </html>
