@@ -8,15 +8,23 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: whitesmoke;
     color: #000;
+    padding-top: 90px;
 }
 /*Header*/
 header{
     background: rgb(237, 237, 237);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     width: 100%;
+    top: 0;
+    left: 0;
     padding: 24px 40px;
+    position: fixed;
+    z-index: 1000;
+    isolation: isolate;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    transition: top 0.35s ease-out;
 }
 header .logo{
     font-size: 24px;
@@ -81,6 +89,10 @@ header .logo span{
     background-clip: text;
     color: transparent;
 }
+#main-text:hover{
+    transform: scale(1.01);
+    transition: 0.35s ease;
+}
 #all-catalog{
     font-size: 28px;
     margin-top: 70px;
@@ -137,6 +149,7 @@ header .logo span{
 /*Section*/
 .faq{
     padding: 60px 40px;
+    margin-top: -30px;
     background: whitesmoke;
 }
 .faq-container{
@@ -217,3 +230,56 @@ header .logo span{
     transition: transform 0.5s ease;
 }
 /*Footer*/
+.footer{
+    background: rgb(147, 250, 50);
+    color: #111;
+    padding: 60px 40px 30px;
+}
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr 260px;
+    gap: 40px;
+    align-items: start;
+}
+.footer-logo{
+    font-size: 40px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 0.95;
+}
+.footer-columns{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+.footer-column{
+    display: grid;
+    flex-direction: column;
+    gap: 18px;
+}
+.footer-link{
+    color: black;
+    font-size: 15px;
+    line-height: 1.35;
+    text-decoration: none;
+}
+.footer-link:hover{
+    text-decoration: underline;
+}
+.footer-payment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+}
+.footer-payment img{
+    padding: 0;
+    height: 90px;
+    width: 90px;
+    object-fit: contain;
+    background: transparent;
+    opacity: 0.95;
+}
