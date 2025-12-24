@@ -31,6 +31,8 @@ Includes a fixed header with a mobile hamburger menu, a game catalog grid, an FA
 # Project Structure
 When downloading files, it is important to download everything and install it in a specific structure!
 Structure below
+
+```text
 .
 ├── index.html
 ├── css/
