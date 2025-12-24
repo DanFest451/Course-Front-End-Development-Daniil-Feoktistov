@@ -71,6 +71,31 @@ header .logo span{
     text-decoration: none;
     cursor: pointer;
 }
+.header-actions{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+/* Hamburger (hidden by default) */
+.hamburger{
+    display: none;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+.hamburger span{
+    width: 24px;
+    height: 3px;
+    background: rgb(12, 101, 179);
+    border-radius: 3px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
 #main-text {
     margin-top: 40px;
     text-align: center;
@@ -256,7 +281,7 @@ header .logo span{
     gap: 40px;
 }
 .footer-column{
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 18px;
 }
@@ -282,4 +307,235 @@ header .logo span{
     object-fit: contain;
     background: transparent;
     opacity: 0.95;
+}
+/* RESPONSIVE BREAKPOINTS */
+
+/* Large tablets / small laptops */
+@media (max-width: 1100px){
+  header{
+    padding: 18px 24px;
+  }
+
+  .navbar{
+    gap: 24px;
+  }
+
+  .navbar a{
+    font-size: 15px;
+  }
+
+  .icons{
+    gap: 18px;
+  }
+
+  .main{
+    padding: 26px 24px 50px;
+  }
+
+  #all-catalog{
+    margin-left: 24px;
+  }
+
+  .catalog-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+
+  .faq{
+    padding: 50px 24px;
+  }
+
+  .footer{
+    padding: 50px 24px 26px;
+  }
+
+  .footer-container{
+    grid-template-columns: 200px 1fr 220px;
+    gap: 28px;
+  }
+
+  .footer-columns{
+    gap: 28px;
+  }
+
+  .footer-payment img{
+    height: 90px;
+    width: 90px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px){
+  body{
+    padding-top: 84px;
+  }
+
+  header{
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    row-gap: 0;
+  }
+
+  .icons{
+    display: none;
+  }
+
+  .hamburger{
+    display: flex;
+  }
+
+  .header-actions.open .icons{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: rgb(237, 237, 237);
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .header-actions.open .icons a{
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+  }
+
+  .header-actions.open .icons a:hover{
+    background: rgba(12, 101, 179, 0.10);
+  }
+
+  .header-actions.open .hamburger span:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+  }
+  .header-actions.open .hamburger span:nth-child(2){
+    opacity: 0;
+  }
+  .header-actions.open .hamburger span:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .navbar{
+    grid-column: auto;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 18px;
+  }
+
+  #all-catalog{
+    margin-top: 50px;
+  }
+
+  .catalog-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .faq-title{
+    font-size: 32px;
+  }
+
+  .footer-container{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-payment{
+    justify-content: flex-start;
+  }
+}
+
+/* Phones */
+@media (max-width: 520px){
+  body{
+    padding-top: 76px;
+  }
+
+  header{
+    padding: 14px 16px;
+  }
+
+  header .logo{
+    font-size: 14px;
+  }
+
+  .navbar a{
+    font-size: 14px;
+  }
+
+  .icons a{
+    font-size: 15px;
+  }
+
+  .header-actions.open .icons{
+    right: 16px;
+  }
+
+  #main-text{
+    letter-spacing: 3px;
+  }
+
+  #all-catalog{
+    font-size: 22px;
+    margin-left: 16px;
+    margin-top: 40px;
+  }
+
+  .main{
+    padding: 18px 16px 40px;
+  }
+
+  .catalog-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .game-card-price{
+    font-size: 18px;
+  }
+
+  .faq{
+    padding: 38px 16px;
+  }
+
+  .faq-title{
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .faq-question{
+    font-size: 15px;
+    padding: 14px 14px;
+  }
+
+  .faq-icon{
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .footer{
+    padding: 40px 16px 20px;
+  }
+
+  .footer-logo{
+    font-size: 34px;
+  }
+
+  .footer-columns{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer-link{
+    font-size: 14px;
+  }
 }
